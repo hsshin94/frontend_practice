@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+        fieldset {
+            width: 520px;
+            padding: 30px 30px;
+            margin : 0 auto;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        #p1 {
+            font-size: 16px;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            padding: 10px;
+
+        }
+
+        .nanum {
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="nanum">
+    <form action="#" method="post">
+        <fieldset>
+            <h1><b>프런트엔드 개발자 지원서</b></h1>
+            <p id="p1">HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+            
+            <p><b>개인정보</b></p>
+            <ul>
+                <li><label>이름 </label><input type="text" autofocus placeholder="공백없이 입력하세요" required
+                        pattern="[가-힣]{1,}" title="공백없이 한글자 이상의 한글을 입력해주세요!" name="name"></label></li>
+                <li><label>연락처 </label><input type="text" required pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+                        title="숫자 3자리-4자리-3자리의 형식으로 입력해주십시오." name="tel"></label></li>
+            </ul>
+            <p><b>지원 분야</b></p>
+            <ul>
+                <li><input type="radio" name="application" id="application1" value="1"> 웹 퍼블리싱</li>
+                <li><input type="radio" name="application" id="application2" value="2"> 웹 애플리케이션 개발</li>
+                <li><input type="radio" name="application" id="application3" value="3"> 개발 환경 개선</li>
+            </ul>
+            <p><b>지원 동기</b></p>
+            <textarea name="willing" id="willing" cols="60" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea><br>
+            <button type="submit">접수하기</button>&nbsp;<button type="reset">다시쓰기</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>

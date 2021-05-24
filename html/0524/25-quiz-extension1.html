@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ul1,#ul2{
+            list-style-type: none;
+            padding: 0em;
+        }
+        .id1{
+            display: inline;
+        }
+        .div1{
+            padding: 57px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-left: 5px;
+            margin-right: 5px;
+            background-color: rgb(233, 231, 231);
+            display: inline-block;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Menu examples</h1>
+    <h2>A menu with navigation links</h2>
+    <ul id="ul1">
+        <div class="div1"><li class="id1">Home</li></div>
+        <div class="div1"><li class="id1">About Us</li></div>
+        <div class="div1"><li class="id1">Products</li></div>
+    </ul>
+    <p>VoiceOver will announce the above as links, e.g. "Home, link".</p>
+    <h2>A menu with role=menu</h2>
+    <ul id="ul2">
+        <div class="div1"><li class="id1">Home</li></div>
+        <div class="div1"><li class="id1">About Us</li></div>
+        <div class="div1"><li class="id1">Products</li></div>
+    </ul>
+    <p>In the role=menu example, VoiceOver on Mac/iOS will announce "Home, menu item" and after a pause "You are currently on a menu item [...] To close this menu, press Escape".</p>
+    <h2>More on the subject</h2>
+        <ul id="ul3">
+            <li class="id2"><a href="#">Article on Inclusive Components</a></li>
+            <li class="id2"><a href="#">W3C ARIA menu specification with expected keyboard etc behaviours</a></li>
+            <li class="id2"><a href="#">Working example of navigation menu using role=menu</a></li>
+        </ul>
+    
+</body>
+</html>

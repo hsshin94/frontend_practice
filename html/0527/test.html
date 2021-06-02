@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .head img{
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+        .head form{
+            float: right;
+        }
+        label{
+            display: block;
+        }
+       
+        button{display: inline;}
+        
+        nav{
+            clear: both;
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li{
+            display: inline-block;
+            margin: 5px 30px;
+        }
+        a{
+            text-decoration: none;
+            color: blue;
+        }
+        main{
+            padding: 0;
+            margin: 0;
+        }
+        section{
+            width: auto;
+            height: 400px;
+            background-color: gray;
+            padding: 0;
+            margin: 0;
+        }
+        footer{
+            background-color: #ccc;
+            width: auto;
+            height: 50px;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 50px;
+            padding: 0;
+            margin: 0;
+        }
+        p{
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <img src="./img/rose.jpg" alt="임의의 이미지파일">
+            <form action="#" method="post">
+                <label>아이디&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" required></label>
+                <label>패스워드&nbsp;<input type="password" required></label>
+                <button type="submit">로그인</button>
+                <button type="reset">취소</button>
+            </form>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">메인</a></li>
+                <li><a href="">공지사항</a></li>
+                <li><a href="">자유게시판</a></li>
+                <li><a href="">갤러리</a></li>
+                <li><a href="">회원관리</a></li>
+                <li><a href="">채팅하기</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section></section>
+    </main>
+    <footer>
+        <p>Copyright ⓒ GooDee Academy. All right reserved.</p>
+    </footer>
+</body>
+</html>

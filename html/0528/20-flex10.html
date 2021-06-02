@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .flex-container{
+            display: flex;
+        }
+        .flex-item{
+            flex-grow: 1;
+        }
+        .flex-item:nth-child(2){flex-grow: 3;}
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">AAAAaaaaaaaaaaaaaaaaaaaaA</div>
+        <div class="flex-item">BBBBBBBbbbbb</div>
+        <div class="flex-item">CC</div>
+    </div>
+</body>
+</html>

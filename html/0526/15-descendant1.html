@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #container ul{
+            border: 1px dotted blue;
+        } */
+        #container > ul {
+            border: 1px dotted blue;
+        }
+        /* h1+p{
+            color: blue; 
+            font-weight: bold;
+        } */
+        /* h1 ~ p{
+            color: blue;
+        } */
+        /* p[alt] {color: red;} */
+        /* p[alt="abc"]{color: red;} */
+        /* p[class |= "abc aaa"] {color:red} */
+        p[title ^= "us"] {color: darkseagreen;}
+        p[title $= "my"] {background-color : yellow}
+        p[class *= "d"] {font-size: 2em;}
+    </style>
+</head>
+<body>
+    <section id="container">
+        <header>
+            <p>더 자세한 내용은 홈페이지 참조</p>
+            <h1>예약 방법 및 요금</h1>
+            <p class="abc aaa" title="us-eng">더 자세한 내용은 홈페이지 참조</p>
+            <p class="bcd ddd" title="usarmy">더 자세한 내용은 홈페이지 참조</p>
+            <p>더 자세한 내용은 홈페이지 참조</p>
+            <p>더 자세한 내용은 홈페이지 참조</p>
+            <p>더 자세한 내용은 홈페이지 참조</p>
+            
+        </header>
+        <ul>
+            <li> 예약 방법
+                <ul>
+                    <li>직접 통화</li>
+                    <li>문자 남기기</li>
+                    
+                </ul>
+            </li>
+            <li> 요금
+                <ul>
+                    <li>1인 : 40,000원</li>
+                    <li>2인 : 60,000원</li>
+                    <li>3인 : 80,000원</li>
+                    <li>4인 : 100,000원</li>
+                </ul>
+            </li>
+        </ul>
+
+    </section>
+</body>
+</html>

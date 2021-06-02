@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .atr{
+            border: 1px solid blue;
+            background-color: rgba(0,0,255,0.2);
+            color: white;
+            font-size: 1.5em;
+            padding: 5px 10px;
+        }
+        .atr:hover{
+            background-color: white;
+            color: blue;
+            cursor: pointer;
+        }
+        a:visited{
+            color: red;
+        }
+        input:focus{
+            background-color: rosybrown;
+        }
+        input:disabled{
+            background-color: slategray;
+        }
+        input[type="radio"]:checked+span { background-color: teal;
+        color: white;}
+    </style>
+</head>
+<body>
+    <button class="atr">버튼</button>
+    <a href="#">링크</a>
+    <input type="text">
+    <input type="text" disabled>
+    <label><input type="radio" name="rd" style="display: none;" ><span>체킹</span></label>
+    <label><input type="radio" name="rd" style="display: none;" ><span>체킹</span></label>
+    <label><input type="radio" name="rd" style="display: none;" ><span>체킹</span></label>
+</body>
+</html>

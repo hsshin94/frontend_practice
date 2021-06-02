@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .div1{
+        padding: 0;
+        margin: 0;
+        width: auto;
+        height: auto;
+        min-width: 100%;
+        max-width: 100%;
+        position: relative;
+    }
+    video{
+        position: fixed;
+        z-index: -9999;
+        width: auto;
+        height: auto;
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+        min-width: 100%;
+        max-width: 100%;
+        left: 0;
+        top: 0;
+    }
+    .div2{
+        position: absolute;
+        background-color: rgba(0,0,0,.7);
+        color: white;
+        z-index: 9999;
+        padding: 20px;
+        margin: 0;
+        left: 0;
+        top:100%;
+    }
+    p{
+        padding: 0;
+        margin: 0;
+    }
+    h2{
+        padding: 0;
+        margin: 0;
+        line-height: 60px;
+    }
+    </style>
+</head>
+<body>
+    <div class="div1">
+    <video src="./media/rain.mp4" autoplay muted loop ></video>
+    <div class="div2"><h2>Heading</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quo qui? Beatae, culpa perspiciatis accusamus temporibus maiores fugiat rerum tenetur reprehenderit illum id iusto quae soluta, laudantium deleniti atque error.</p></div>
+    </div>
+</body>
+</html>

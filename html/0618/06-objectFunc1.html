@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var foo ={
+            name : 'foo',
+            age : 35,
+            gender : "man"
+        }
+
+        function Person(name, age, gender){
+            this.name = name;
+            this.age=age;
+            this.gender=gender;
+        }
+
+        var bar = new Person("신현승",28,"man");
+        var car = new Person("유나얼",45,"man");
+
+        car.__proto__.ss=function(){
+            alert("이 기능은 모든 객체가 사용")
+        }
+        bar.ss();
+        car.ss();
+
+        console.dir(foo);
+        console.dir(bar);
+        console.dir(car);
+        console.dir(Person);
+    </script>
+</body>
+</html>

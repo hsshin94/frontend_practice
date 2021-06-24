@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        localStorage.setItem("myCat","Tom");
+        let cat = localStorage.getItem("myCat");
+        console.log(cat);
+
+        // localStorage.removeItem("myCat");
+        // localStorage.clear();
+        // cat = localStorage.getItem("myCat");
+        // console.log(cat);
+
+        sessionStorage.setItem("지나Dog","둥이");
+        sessionStorage.setItem("창환Dog","야구");
+
+        let dog1 = sessionStorage.getItem("지나Dog");
+        let dog2 = sessionStorage.getItem("창환Dog");
+
+        console.log(dog1,dog2); 
+
+        // sessionStorage.removeItem("지나Dog");
+        // sessionStorage.removeItem("창환Dog");
+        // dog1 = sessionStorage.getItem("지나Dog");
+        // dog2 = sessionStorage.getItem("창환Dog");
+
+        // console.log(dog1,dog2); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../0615/js/jquery.js"></script>
+    <script>
+        $(function(){
+            $("li:nth-child(n+2)").css("background-color","yellow");
+            $("ul").append("<li>내용5</li><li>내용6</li>")
+            $("li:nth-child(5)").css("background-color","red");
+            let fontsi=$("div p").css("font-size");
+            console.log(fontsi);
+            $("#btn1").click(function(){
+                $("div p").css("font-size",'${fontsi}-1')
+            })
+            $("#btn2").click(function(){
+                $("div p").css("font-size","14px")
+            })
+            $("#btn3").click(function(){
+                $("div p").css("font-size",'${fontsi}+1')
+            })
+        })
+    </script>
+    <style>
+        p{
+            font
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+        <li>내용4</li>
+    </ul>
+    <div class="box">
+        <button id="btn1">-</button>
+        <button id="btn2">100%</button>
+        <button id="btn3">+</button>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum magnam impedit sapiente dignissimos corporis, nostrum nihil autem odio iusto repudiandae alias repellendus eius dolor, aut ipsa perferendis harum doloribus! Magni.</p>
+        </div>
+    </div>
+</body>
+</html>

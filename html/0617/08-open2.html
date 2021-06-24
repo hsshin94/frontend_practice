@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../0615/js/jquery.js"></script>
+</head>
+<body>
+    <button id="btn">윈도우 오픈</button>
+
+    <script>
+        $("#btn").click(function(){
+            let myWindow=open("","mywin","width=200px, height=300px");
+            myWindow.document.write("<h1>This is myWindow</h1>");
+            myWindow.document.write("<button onclick='window.close();'>윈도우종료</button>");
+            myWindow.opener.document.write("<p>this is the source </p>");
+        })
+    </script>
+</body>
+</html>

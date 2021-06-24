@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(function(){
+            $("#sec_1 p").html("<a href = '#'>앵커태그 </a>");
+            $("#sec_2 p").text("이것은 텍스트임");
+            console.log($("#sec_2 p").text());
+            $("#val".val("3"))
+            
+
+        })
+       
+    </script>
+</head>
+<body>
+    <div id="sec_1">
+        <p></p>
+    </div>
+    <div id="sec_2">
+        <p></p>
+    </div>
+    <input type="text" id="val" name="val">
+</body>
+</html>

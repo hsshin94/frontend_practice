@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>americano</li>
+        <li>cafemoca</li>
+        <li id="myli">coffee</li>
+        <li>coldbrew</li>
+        <li>icetea</li>
+        <li>latte</li>
+    </ul>
+    <button id="btn">버튼</button>
+    <p id="content"></p>
+    <script>
+        document.getElementById("btn").addEventListener("click",function(){
+            // var x = document.getElementById("myli").parentNode.nodeName;
+            // document.getElementById("content").innerHTML=x;
+            // var c = document.getElementsByTagName("ul")[0].firstChild.nextSibling;
+            // document.getElementById("content").innerHTML= c.nodeName;
+            // var c1 = document.getElementsByTagName("ul")[0].firstElementChild;
+            // document.getElementById("content").innerHTML= c1.textContent;
+            // var c2 = document.getElementsByTagName("ul")[0].lastElementChild;
+            // document.getElementById("content").innerHTML= c2.textContent;
+            // var c2 = document.getElementById("myli").nextElementSibling;
+            // var c2 = document.getElementById("myli").parentElement;
+            var c2 = document.getElementsByTagName("ul")[0].children;
+            // for (var index=0; index<c2.length;index++) {
+            //     document.getElementById("content").innerHTML= c2[index].textContent;
+            // }
+            for (const index in c2) {
+                document.getElementById("content").innerHTML= c2[index].textContent;
+            }
+            // document.getElementById("content").innerHTML= c2.length;
+            // document.getElementById("content").innerHTML= c2[0].textContent;
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pic{
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="pic"></div>
+    <button id="b1">나타나라</button>
+    <button id="b2">사라져라</button>
+    <script>
+        document.getElementById("b1").addEventListener("click",function(){
+            document.getElementById("pic").style.display="block";
+        })
+        document.getElementById("b2").addEventListener("click",function(){
+            document.getElementById("pic").style.display="none";
+        })
+    </script>
+</body>
+</html>

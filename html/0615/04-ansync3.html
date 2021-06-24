@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var a =0;
+        // function square(x, callback){
+        //     a= x*x;
+        //     if(callback){
+        //         setTimeout(callback,2000,a);
+        //     }
+        // }
+
+        // setTimeout(square, 2000, 2);
+
+        function square(x, callback){
+            setTimeout(callback, 2000, x*x);
+        }
+
+        square(2,function(x){
+            // console.log(x);
+            square(x, function(x2){
+                square(x2, function(x3){
+                    console.log(x3);
+                })
+            })
+        })
+
+        (function abc(){
+            
+        })
+    </script>
+</body>
+</html>

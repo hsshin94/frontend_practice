@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .three{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            /* z-index: 3; */
+        }
+        .two{
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            /* z-index: 9999; */
+        }
+        .one{
+            background-color: blue;
+            width: 300px;
+            height: 300px;
+            /* z-index: 0; */
+        }
+    </style>
+    <script src="../0615/js/jquery.js"></script>
+    <script>
+        $(function(){
+            $(".three").click(function(e){
+                e.stopPropagation();
+                console.log("three");
+            })
+            $(".two").click(function(e){
+                e.stopPropagation();
+                console.log("two");
+            })
+            $(".one").click(function(e){
+                e.stopPropagation();
+                console.log("one");
+            })
+        })
+    </script>
+
+</head>
+<body>
+    <div class="one">
+        <div class="two">
+            <div class="three"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>다음 중 반응형 웹에 쓰이는 display가 아닌것은?</h3>
+    <ul>
+        <li><label for="d1">flex<input type="checkbox" name="chk" id="d1" class="doc" value="a"></label></li>
+        <li><label for="d2">grid<input type="checkbox" name="chk" id="d2" class="doc" value="b"></label></li>
+        <li><label for="d3">color<input type="checkbox" name="chk" id="d3" class="doc" value="c"></label></li>
+        <li><label for="d4">block<input type="checkbox" name="chk" id="d4" class="doc" value="d"></label></li>
+        <li><label for="d5">border<input type="checkbox" name="chk" id="d5" class="doc" value="e"></label></li>
+    </ul>
+    <button id="result">평가</button>
+    <div id="content"></div>
+    <script>
+        document.querySelector("#result").addEventListener("click",function(){
+            var result = "ffcfe";
+            var content = "<h1>틀렸습니다</h1>";
+            var comp="";
+            document.querySelectorAll(".doc").forEach(element =>{
+                if(element.checked){
+                    comp += element.value;
+                }else{
+                    comp += "f";
+                }
+            })
+            if(result == comp){
+                content = "<h1>정답입니다</h1>";
+            }
+            document.querySelector("#content").innerHTML=content;
+        })
+    </script>
+</body>
+</html>

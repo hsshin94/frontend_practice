@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            display: block;
+        }
+        #bt10{
+            display: inline;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul id="ul1">
+        <li id="li1"><label>아이템1<input type="checkbox" name="c1" id="in"></label></li>
+        <li id="li2"><label>아이템2<input type="checkbox" name="c1" id=""></label></li>
+        <li id="li3"><label>아이템3<input type="checkbox" name="c1" id=""></label></li>
+        <li id="li4"><label>아이템4<input type="checkbox" name="c1" id=""></label></li>
+        <li id="li5"><label>아이템5<input type="checkbox" name="c1" id=""></label></li>
+    </ul>
+    <ul id="ul2">
+        <li id="li6"><label>아이템6<input type="checkbox" name="c1" id=""></label></li>
+        <li id="li7"><label>아이템7<input type="checkbox" name="c1" id=""></label></li>
+        <li id="li8"><label>아이템8<input type="checkbox" name="c1" id=""></label></li>
+        <li id="li9"><label>아이템9<input type="checkbox" name="c1" id=""></label></li>
+        <li id="li10"><label>아이템10<input type="checkbox" name="c1" id=""></label></li>
+    </ul>
+    <button id="bt1">ul1위에서 ul2위로</button>
+    <button id="bt2">ul1위에서 ul2아래로</button>
+    <button id="bt3">ul1아래서 ul2위로</button>
+    <button id="bt4">ul1아래서 ul2아래로</button>
+    <button id="bt5">ul2위에서 ul1위로</button>
+    <button id="bt6">ul2위에서 ul1아래로</button>
+    <button id="bt7">ul2아래서 ul1위로</button>
+    <button id="bt8">ul2아래서 ul1아래로</button>
+    <button id="bt9">삭제</button>
+    <input type="text" name="" id="text">
+    <button id="bt10">수정</button>
+    <script>
+        function moveElement_sm(ori,des,e,target){
+            const f1 = document.getElementById(ori);
+            const f1_el=(e)?f1.firstElementChild:f1.lastElementChild;
+            if(target){
+                document.getElementById(des).prepend(f1_el);
+            }else{
+                document.getElementById(des).append(f1_el);
+            }
+        }
+        document.getElementById("bt1").addEventListener("click",function(){moveElement_sm("ul1","ul2",true,true)});
+        document.getElementById("bt2").addEventListener("click",function(){moveElement_sm("ul1","ul2",true,false)});
+        document.getElementById("bt3").addEventListener("click",function(){moveElement_sm("ul1","ul2",0,1)});
+        document.getElementById("bt4").addEventListener("click",function(){moveElement_sm("ul1","ul2",0,0)});
+        document.getElementById("bt5").addEventListener("click",function(){moveElement_sm("ul2","ul1",1,1)});
+        document.getElementById("bt6").addEventListener("click",function(){moveElement_sm("ul2","ul1",1,0)});
+        document.getElementById("bt7").addEventListener("click",function(){moveElement_sm("ul2","ul1",0,1)});
+        document.getElementById("bt8").addEventListener("click",function(){moveElement_sm("ul2","ul1",0,0)});
+        // document.querySelector("#bt1").addEventListener("click",function(){
+        //     document.querySelector("#ul2").prepend(document.querySelector("#ul1").firstElementChild);
+        // })
+
+        // document.querySelector("#bt2").addEventListener("click",function(){
+        //     document.querySelector("#ul2").append(document.querySelector("#ul1").firstElementChild);
+        // })
+
+        // document.querySelector("#bt3").addEventListener("click",function(){
+        //     document.querySelector("#ul2").prepend(document.querySelector("#ul1").lastElementChild);
+        // })
+
+        // document.querySelector("#bt4").addEventListener("click",function(){
+        //     document.querySelector("#ul2").append(document.querySelector("#ul1").lastElementChild);
+        // })
+
+        // document.querySelector("#bt5").addEventListener("click",function(){
+        //     document.querySelector("#ul1").prepend(document.querySelector("#ul2").firstElementChild);
+        // })
+
+        // document.querySelector("#bt6").addEventListener("click",function(){
+        //     document.querySelector("#ul1").append(document.querySelector("#ul2").firstElementChild);
+        // })
+
+        // document.querySelector("#bt7").addEventListener("click",function(){
+        //     document.querySelector("#ul1").prepend(document.querySelector("#ul2").lastElementChild);
+        // })
+
+        // document.querySelector("#bt8").addEventListener("click",function(){
+        //     document.querySelector("#ul1").append(document.querySelector("#ul2").lastElementChild);
+        // })
+
+        document.querySelector("#bt9").addEventListener("click",function(){
+            // var chk=(document.querySelector("#input").checked=true);
+            // chk.parentElement.parentElement.remove();
+            var input = document.querySelectorAll("input[type='checkbox']");
+            for (const key in input) {
+                if (input[key].checked){
+                    input[key].parentElement.parentElement.remove();
+                }
+            }
+        })
+
+        document.querySelector("#bt10").addEventListener("click",function(){
+            var input = document.querySelectorAll("input[type='checkbox']");
+            var text = document.getElementById("text").value;
+            for (const key in input) {
+                if (input[key].checked){
+                    input[key].parentElement.innerText=text;
+                }
+            }
+        })
+        
+    </script>
+</body>
+</html>

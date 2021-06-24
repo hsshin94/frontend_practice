@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(function(){
+            var width = prompt(`가로길이`);
+            var height = prompt(`세로길이`);
+            var color = prompt(`색`);
+
+            $(".cls").css("background-color",`${color}`);
+            $(".cls").css("width",`${width}px`);
+            $(".cls").css("height",`${height}px`);
+
+            console.log(`${width},${height},${color}`);
+        })
+    </script>
+</head>
+<body>
+    <div class="cls">사각형</div>
+</body>
+</html>

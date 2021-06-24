@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box" class="pic"></div>
+    <button id="bt1" name="bt" value="bt1" onclick="changeColor('red')">버튼1</button>
+    <button id="bt2" name="bt" value="bt2" onclick="changeColor('blue')" >버튼2</button>
+    <button id="bt3" name="bt" value="bt3" onclick="changeColor('green')">버튼3</button>
+    <script>
+        var div = document.querySelector("#box");
+        document.querySelector("#box").style= "width:200px;height:200px;background-color:gray";
+        // document.querySelector("#bt1").addEventListener("click",function(){
+        //     div.style.backgroundColor="red"
+        // })
+        // document.querySelector("#bt2").addEventListener("click",function(){
+        //     div.style.backgroundColor="blue"
+        // })
+        // document.querySelector("#bt3").addEventListener("click",function(){
+        //     div.style.backgroundColor="green"
+        // })
+        function changeColor(col){
+            document.querySelector(".pic").style.backgroundColor=col;
+        }
+        // document.getElementById("bt1").addEventListener("click",changeColor("red"),false);
+
+    </script>
+</body>
+</html>

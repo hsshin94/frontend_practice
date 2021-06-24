@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+</head>
+<style>
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .submit:hover{
+        background-color: yellow;
+    }
+    main input{
+        border-style: none;
+        border-bottom:solid 1px gray;
+        border-collapse:collapse;
+        margin: 10px;
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+<body>
+    <header>
+        <h1>참가신청</h1>
+    </header>
+    <main>
+        <section class="section1">
+        <input type="text" name="" id="input1" placeholder="이름을 입력하세요."><button type="submit" class="submit">신청</button>
+        </section>
+        <section class="section2">
+        <div class="list"></div>
+        </section>
+    </main>
+    <script>
+        document.querySelector(".submit").addEventListener("click",function() {
+            var input=document.querySelector("#input1").value;
+            if(input==null){
+                alert("이름을 입력하세요");
+            }
+            else{document.querySelector(".list").append(input);}
+        })
+    </script>
+</body>
+</html>

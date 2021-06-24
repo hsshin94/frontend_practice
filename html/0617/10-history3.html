@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../0615/js/jquery.js"></script>
+    <script>
+        $(function(){
+            $("#back").click(function(){
+                // history.back()
+                history.go(-1);
+            })
+            $("#move1").click(function(){
+                location.href = "10-history1.html";
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>history3</h1>
+    <button id="move1">history1로 이동</button>
+    <button id="back">뒤로가기</button>
+</body>
+</html>

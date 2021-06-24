@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../0615/js/jquery.js"></script>
+</head>
+<body>
+    <a id="movex" href="https://www.naver.com">네이버로 이동</a>
+
+    <form  id="sub" action="https://www.naver.com">
+        <button type="submit">이동</button>
+    </form>
+
+    <script>
+        document.getElementById("movex").addEventListener("click",function(e){
+            e.preventDefault();
+            console.log("전처리중");
+            setTimeout(function(){
+                alert("전처리 완료");
+            },2000)
+            
+        },false);
+
+        $("#sub").submit(function(e){
+            e.preventDefault();
+            setTimeout(function(){
+                alert("전처리 완료");
+                location.href = "https://www.naver.com"
+            },2000)
+        })
+    </script>
+</body>
+</html>

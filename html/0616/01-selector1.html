@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../0615/js/jquery.js"></script>
+    <script>
+        $(function(){
+            $("*").css("background-color","yellow").css("border","1px solid black");
+            $("h2").css({
+                "padding":"2em",
+                "color":"cyan"
+            })
+            $(".cls").css("box-shadow","3px 3px 0 6px gray");
+            $("#id").css("font-size","5em");
+            $("h1,h2").css("transform","rotateZ(45deg)");
+        })
+    </script>
+</head>
+<body>
+    <h1>제이쿼리</h1>
+    <h2>쉽습니다</h2>
+    <h3 class="cls">쓰기 편리합니다</h3>
+    <h4 id="id">난 좀 특별해</h4>
+</body>
+</html>

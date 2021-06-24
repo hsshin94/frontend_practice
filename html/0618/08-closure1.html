@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function closure(a,b){
+            var innerA=a;
+            var innerB=b;
+            function inner(str){
+                return `${str} : ${innerA+innerB}`;
+            }
+            return inner;
+        }
+
+        var s = closure(1,2);
+
+        console.log(s("김근형"));
+    </script>
+</body>
+</html>

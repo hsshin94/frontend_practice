@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="image" src="../0609/img/coffee.jpg" alt="abcd">
+    <p id="p1"></p>
+    <script>
+        // document.getElementById("p1").innerText=document.getElementById("image").src;
+        // document.getElementById("image").src="../0609/img/ice.jpg";
+        // document.getElementById("p1").innerText=document.getElementById("image").attributes[1].value
+        // document.getElementById("p1").innerText=document.getElementById("image").getAttribute("src");
+
+        var example = {
+            name : "예시",
+            width : 200
+        }
+        document.getElementById("image").setAttribute("width","200px");
+        document.getElementById("image").setAttribute("height","400px");
+        document.getElementById("image").removeAttribute("alt");
+        console.log(document.getElementById("image").hasAttribute("width"));
+        document.getElementById("image").naul="신";
+        console.log(document.getElementById("image").hasAttribute("naul"));
+        example.naul="신";
+        example.hasAttribute("naul");
+        console.dir(document.getElementById("image"));
+        console.dir(example);
+        
+    </script>
+</body>
+</html>

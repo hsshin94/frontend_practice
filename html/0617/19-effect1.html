@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../0615/js/jquery.js"></script>
+    <script>
+        $(function(){
+            $(".btn2").hide();
+            $(".btn1").on("click",function(){
+                $(".box").fadeOut(1000, "swing",function(){
+                    $(".btn1").hide();
+                    $(".btn2").show();
+                })
+            })
+            $(".btn2").on("click",function(){
+                $(".box").fadeIn(1000, "swing",function(){
+                    $(".btn2").hide();
+                    $(".btn1").show();
+                })
+            })
+
+            $(".btn3").on("click",function(){
+                // $(".box").fadeToggle(1000,"swing");
+                $(".box").slideToggle(1000,"swing");
+            })
+
+            $(".btn4").on("click",function(){
+                $(".box").fadeTo("fast",0.3);
+                
+            })
+
+            $(".btn5").on("click",function(){
+                $(".box").fadeTo("fast",1);
+              
+            })
+        })
+    </script>
+    <style>
+        .content{
+            width: 400px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <button class="btn1">slideup</button>
+        <button class="btn2">fadein</button>
+    </p>
+    <p>
+        <button class="btn3">toggleSide</button>
+    </p>
+    <p>
+        <button class="btn4">fadeTo(0.3)</button>
+        <button class="btn5">fadeTo(1)</button>
+    </p>
+    <div class="box">
+        <div class="content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi obcaecati praesentium veritatis et perspiciatis illum cupiditate optio, reprehenderit maxime at in? Cum consequatur voluptatum, sapiente accusantium dolorum dolore at beatae.
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="itally">
+        <li>알리오올리오</li>
+        <li>까르보나라</li>
+        <li>스테이크</li>
+    </ul>
+    <ul id="japan">
+        <li>초밥</li>
+        <li id = "stand">라멘</li>
+        <li id="del-menu">규동</li>
+    </ul>
+    <button id="ins">메뉴 추가</button>
+    <button id="inspd">메뉴 삽입</button>
+    <button id="del">메뉴 삭제</button>
+    <script>
+        document.getElementById("ins").addEventListener("click",function(){
+            var li = document.createElement("li");
+            var text = document.createTextNode("피쉬 앤 칩스")
+            li.append(text)
+            document.getElementById("itally").append(li);
+        })
+
+        document.getElementById("inspd").addEventListener("click",function(){
+            var li = document.createElement("li");
+            var text = document.createTextNode("가라아게")
+            li.append(text)
+            document.getElementById("stand").after(li);
+        })
+
+        document.getElementById("del").addEventListener("click",function(){
+            document.getElementById("del-menu").remove();
+        })
+    </script>
+</body>
+</html>

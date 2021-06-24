@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>다음 중 SPA와 관련된 라이브러리가 아닌 것은</h1>
+    <ui>
+        <li><label for="d1">vue<input type="radio" name="d" id="d1" class="sol" value="a"></label></li>
+        <li><label for="d2">react<input type="radio" name="d" id="d2" class="sol" value="b"></label></li>
+        <li><label for="d3">angular<input type="radio" name="d" id="d3" class="sol" value="c"></label></li>
+        <li><label for="d4">style.css<input type="radio" name="d" id="d4" class="sol" value="d"></label></li>
+    </ui>
+    <button id="solve">채점</button>
+    <div id="result"></div>
+    <script>
+        document.getElementById("solve").addEventListener("click",function(){
+            var cls=document.getElementsByClassName("sol");
+            var str="<h1>틀렸습니다</h1>"
+            for(let index=0; index<cls.length;index++){
+                if(cls[index].checked && cls[index].value == "d"){
+                    str ="<h1>정답입니다</h1>";
+                    break;
+                }
+            }
+            document.getElementById("result").innerHTML= str;
+        })
+    </script>
+</body>
+</html>

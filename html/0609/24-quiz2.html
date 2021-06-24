@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab{
+            display: flex;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        .tab button{
+            background-color: #f1f1f1;
+            border: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+        }
+        .tab button:hover {
+            background-color: #ddd;
+
+        }
+        .tabcontent{
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <button class="tablinks" id="tab1">탭메뉴1</button>
+        <button class="tablinks" id="tab2">탭메뉴2</button>
+        <button class="tablinks" id="tab3">탭메뉴3</button>
+    </div>
+    <div id="tab1-content" class="tabcontent">
+        <h3>탭메뉴1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem earum veritatis culpa ea, maiores, doloremque consequuntur perferendis eaque quasi sequi corporis id pariatur dignissimos commodi eum omnis asperiores molestiae dolorem.</p>
+    </div>
+    <div id="tab2-content" class="tabcontent">
+        <h3>탭메뉴2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur possimus porro veniam dolor esse omnis neque. Harum esse excepturi cum doloremque. Officiis facilis iure exercitationem quam, accusamus voluptatem magnam eum.</p>
+    </div>
+    <div id="tab3-content" class="tabcontent">
+        <h3>탭메뉴3</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas voluptas placeat ratione ipsam voluptatum aperiam corrupti debitis a qui. Ullam a voluptatem maxime aperiam aspernatur dolorum autem laborum expedita ratione.</p>
+    </div>
+    <script>
+        const tabFunction = function(tab){
+            var tabcontent = document.getElementsByClassName("tabcontent");
+            var tablinks = document.getElementsByClassName("tablinks");
+            for (let index = 0; index < tablinks.length; index++) {
+                tabcontent[index].style.display = "none";
+                tablinks[index].style.backgroundColor="#f1f1f1";
+            }
+            document.getElementById(`${tab}-content`).style.display = "block";
+            document.getElementById(tab).style.backgroundColor="#ccc";
+        }
+        document.getElementById("tab1").addEventListener("click",function(){tabFunction("tab1")});
+        document.getElementById("tab2").addEventListener("click",function(){tabFunction("tab2")});
+        document.getElementById("tab3").addEventListener("click",function(){tabFunction("tab3")});
+    </script>
+</body>
+</html>

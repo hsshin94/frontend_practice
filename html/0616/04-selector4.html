@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../0615/js/jquery.js"></script>
+    <script>
+        $(function(){
+            $("li").last().css("color","blue");
+            $("li:nth-last-of-type(2)").css("background-color","purple");
+            $("li:gt(12)").css("transform","rotatez(-5deg)");
+            $("li:lt(2)").css("transform","translateX(2rem)");
+            $("li").slice(2,5).css("color","hotpink");
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li>아이템1</li>
+        <li>아이템2</li>
+        <li>아이템3</li>
+        <li>아이템4</li>
+        <li>아이템5</li>
+        <li>아이템6</li>
+    </ul>
+    <ul>
+        <li>아이템1</li>
+        <li>아이템2</li>
+        <li>아이템3</li>
+        <li>아이템4</li>
+        <li>아이템5</li>
+        <li>아이템6</li>
+    </ul>
+    <ul>
+        <li>아이템1</li>
+        <li>아이템2</li>
+        <li>아이템3</li>
+        <li>아이템4</li>
+        <li>아이템5</li>
+        <li>아이템6</li>
+    </ul>
+</body>
+</html>

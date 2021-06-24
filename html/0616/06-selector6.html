@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../0615/js/jquery.js"></script>
+    <script>
+        $(function(){
+            var arr1 = [
+                {"area":"서울",
+                "name":"무대리"},
+                {"area":"부산",
+                "name":"강과장"},
+                {"area":"대전",
+                "name":"김대표"},
+                {"area":"서울",
+                "name":"최책임"},
+
+            ]
+
+            // var arr2 = $.map(arr1, function(a){
+            //     if(a.area == '서울'){
+            //         return a;
+            //     }
+            // })
+
+            // console.log(arr2);
+
+            var arr2 = $.map(arr1, function(a){
+                return(a.area == '서울');
+            });
+            console.log(arr2);
+
+            // var arr3 = $.grep(arr1,function(a){
+            //     // if(a.area == "서울"){
+            //     //     return true;
+            //     // }else{
+            //     //     return false;
+            //     // }
+            //     return(a.area == "서울");
+            // })
+            // console.log(arr3);
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

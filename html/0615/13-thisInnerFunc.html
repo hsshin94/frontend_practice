@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function parent(){
+            var a =1;
+            var b=2;
+
+            function child(){
+                console.log(a);
+                console.log(this);
+            }
+            child();
+        }
+        parent();
+
+        function callFunc(callback){
+            callback();
+        }
+        function callBackFunc(){
+            console.log(this);
+        }
+        callFunc(callBackFunc);
+
+        let obj1 = {
+            a : 123,
+            funcA : function(callback){
+                callback();
+            }
+        }
+        obj1.funcA(callBackFunc);
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ex1 = ['a','b','c'];
+        ex1.push('d');
+        console.log(ex1);
+
+        var a=ex1.pop();
+        console.log(ex1);
+        console.log(a);
+
+        var b= ex1.shift();
+        console.log(ex1);
+        console.log(b);
+
+        var ex2=['d','e'];
+        var result1=ex1.concat(ex2);
+        console.log(result1);
+
+        var result2=ex1.join("/");
+        console.log(result2)
+
+        var ex3=['a','b','c'];
+        ex3.reverse();
+        console.log(ex3);
+
+        var ex4=[5,13,1,6,3,2];
+        ex4.sort();
+        console.log(ex4);
+        console.log(typeof(ex4[0]));
+
+        var result3= ex4.slice(2,3);
+        console.log(result3);
+
+        var ex5=['a','b','c','d'];
+        var result4=ex5.splice(1,1);
+        console.log(ex5);
+        console.log(result4);
+
+
+    </script>
+</body>
+</html>

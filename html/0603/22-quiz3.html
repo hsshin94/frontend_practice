@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="operate1" id="operate1" value="">
+    <input type="text" name="operate2" id="operate2" value="">
+    <button type="submit" id="comp">연산</button>
+
+    <script>
+        document.getElementById("comp").addEventListener("click",function(){
+            var result=(document.getElementById("operate1").value==document.getElementById("operate2").value)?"같다":(document.getElementById("operate1").value>document.getElementById("operate2").value)?"크다":"작다";
+            alert(result);
+        },false);
+        
+    </script>
+</body>
+</html>

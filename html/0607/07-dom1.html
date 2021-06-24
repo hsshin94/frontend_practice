@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="ex1"></div>
+    <script>
+        // console.dir(document);
+        var div = document.getElementById("ex1");
+        console.dir(div);
+        div.style.width = "100px";
+        var div2=div;
+        div2.style.height ="100px";
+        var div3=div2;
+        div3.style.backgroundColor="red";
+        div.innerHTML="<h1>안녕하세요</h1>"
+    </script>
+</body>
+</html>
